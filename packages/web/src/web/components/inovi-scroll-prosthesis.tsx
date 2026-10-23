@@ -1,3 +1,4 @@
+import { SectionTextReveal } from "./section-text-reveal";
 import { useEffect, useRef } from "react";
 import { ArrowDown } from "lucide-react";
 
@@ -123,11 +124,11 @@ export function InoviScrollProsthesis() {
         </header>
         <div className="inovi-dental-copy">
           <p>PRECISÃO EM CADA DETALHE</p>
-          <h2 id="dental-scroll-title">A precisão <span>ganha forma.</span></h2>
+          <h2 id="dental-scroll-title"><SectionTextReveal>A precisão <span className="inovi-dental-title-accent">ganha forma.</span></SectionTextReveal></h2>
           <p className="inovi-dental-description">Estética e função em cada detalhe.</p>
         </div>
         <div className="inovi-dental-visual">
-          <picture><source media="(max-width:767px)" srcSet="/dental-scroll-mobile/001.webp" /><img src="/dental-scroll/001.webp" alt="Transformação visual de uma prótese dentária, da estrutura à superfície final" width="1280" height="720" /></picture>
+          <picture><source media="(max-width:767px)" srcSet="/dental-scroll-mobile/001.webp" /><img src="/dental-scroll/001.webp" loading="lazy" decoding="async" alt="Transformação visual de uma prótese dentária, da estrutura à superfície final" width="1280" height="720" /></picture>
           <canvas ref={canvas} aria-hidden="true" />
         </div>
         <div className="inovi-dental-bottom" aria-hidden="true">

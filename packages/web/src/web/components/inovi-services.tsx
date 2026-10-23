@@ -1,3 +1,4 @@
+import { SectionTextReveal } from "./section-text-reveal";
 import { ArrowUpRight, Layers3, ScanLine } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -29,7 +30,7 @@ export function InoviServices() {
     <section id="servicos" className="inovi-services" aria-labelledby="services-title">
       <header className="inovi-services-heading" data-scroll-reveal="slide-left">
         <span className="inovi-services-eyebrow">NOSSO LABORATÓRIO</span>
-        <h2 id="services-title">Serviços INOVI</h2>
+        <h2 id="services-title"><SectionTextReveal>Serviços INOVI</SectionTextReveal></h2>
         <p>Conheça os procedimentos do nosso laboratório de próteses dentárias.</p>
       </header>
       <div className="inovi-services-grid">

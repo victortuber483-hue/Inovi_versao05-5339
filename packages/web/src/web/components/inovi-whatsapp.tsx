@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
-const contact = "https://wa.me/5583998247412?text=" + encodeURIComponent("Olá! Gostaria de conhecer as soluções em próteses dentárias da INOVI.");
+const contact = "https://wa.me/5583998247412?text=" + encodeURIComponent("Olá, equipe INOVI! Vim pelo site e gostaria de solicitar um orçamento para um caso de prótese dentária. Quais informações e arquivos preciso enviar para começarmos?");
 
 export function InoviWhatsapp() {
   const [visible, setVisible] = useState(false);

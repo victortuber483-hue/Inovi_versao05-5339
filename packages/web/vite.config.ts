@@ -30,7 +30,6 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
-      host: "0.0.0.0",
       port: ports.website,
       strictPort: true,
       allowedHosts: true,

@@ -95,3 +95,24 @@ Na abertura, deslocar a cena cósmica para baixo, mantendo a região do título 
 VF é uma agência de marketing em João Pessoa: sites e landing pages de alta conversão, experiências únicas e imersivas, credibilidade e confiança no mercado digital. Resultados apresentados como objetivos, não garantias.
 Revelações por IntersectionObserver com duração de 850 ms e pequenos atrasos de 80–180 ms: títulos, descrições, cards e CTAs individualmente. Preservar flutuação em elementos internos e a sequência de vídeo sincronizada ao scroll. Reduced motion mostra tudo sem animação.
 Seção Quem somos imediatamente após portfólio: foto original de Victor Ferreira em moldura editorial com halo violeta, texto ao lado no desktop/acima do texto no mobile. Fundador e CEO, 21 anos, mais de 5 anos no marketing digital. Sem números de resultados inventados. Novo founder-section.tsx e hook use-scroll-reveal.ts; apenas web, sem API ou banco.
+
+## Revelação dos títulos de seção
+Títulos de seção entram palavra por palavra, com deslocamento vertical suave de 16px e opacidade, duração de 650ms e intervalo de 65ms. Disparo único ao entrar na tela; preservar fontes, cores, quebras e título principal. Respeitar movimento reduzido. Aplicar também no título do modal Sobre Nós ao abrir.
+
+### Desfoque no surgimento dos títulos
+Antes da revelação, palavras ficam com opacidade 0.25 e blur de 8px. Na entrada pela rolagem, passam a opacidade 1 e blur 0 em 900ms, preservando a cascata de palavras e o movimento vertical. Movimento reduzido exibe texto nítido imediatamente.
+
+### Uso estratégico do desfoque
+Restringir blur aos títulos A precisão ganha forma e Serviços INOVI. Blur moderado de 5px, opacidade inicial 0.35, 800ms; disparo único. Não aplicar ao hero, vídeo, cards, contatos ou modal. Demais títulos mantêm somente a revelação anterior.
+
+### Desfoque em toda a página — expansão aprovada
+Aplicar surgimento suave a textos, imagens de marca, cartões, rodapé e conteúdo do modal em grupos independentes; títulos com cascata de palavras. Preservar animações de vídeo/canvas e WhatsApp flutuante. Blur 5px, duração 800ms, disparo único; respeitar movimento reduzido e foco de teclado.
+
+## Abertura imersiva com carregamento real
+Tela branca/prateada, marca INOVI, legenda “Preparando cada detalhe.” e progresso real por recursos essenciais preparados. Preparar 24 quadros decodificados do hero (1 para movimento reduzido), primeiro quadro responsivo da prótese, logo e fontes usadas na abertura. Não montar a página antes da reserva estar pronta. Reutilizar quadros preparados no hero, sem substituir a animação. 100% significa abertura pronta, não página inteira. Dissolução suave após breve confirmação; estado de falha com repetir/entrar sem esperar, sem inventar porcentagem. Conteúdo restante carregado após entrada e quadros do scroll por proximidade.
+
+## Revisão da abertura: minimalismo
+Somente fundo branco, frase Preparando cada detalhe, barra fina prata brilhante com reflexo azul-gelo e porcentagem centralizada. Remover logo, círculos, assinatura e textos extras. Manter progresso real e ações somente em caso de erro.
+
+## Ponte entre serviços e contatos
+Inserir título centralizado “Vamos conversar sobre o seu próximo caso?” e apoio “Conte com a INOVI para alinhar os detalhes, esclarecer dúvidas e solicitar seu orçamento.” Sem botão adicional. Poppins leve, cinza-prata da página, respiro controlado, cascata suave no título e blur no apoio.

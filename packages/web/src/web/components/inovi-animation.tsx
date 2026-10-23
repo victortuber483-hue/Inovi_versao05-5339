@@ -1,3 +1,4 @@
+import { preparedHeroFrames } from "../lib/experience-preparation";
 import { useEffect, useRef, useState } from "react";
 
 const FRAME_COUNT = 192;
@@ -25,7 +26,7 @@ export function InoviAnimation() {
     let lastWidth = 0;
     let lastHeight = 0;
     let lastDpr = 0;
-    const frames = new Map<number, HTMLImageElement>();
+    const frames = new Map<number, HTMLImageElement>(preparedHeroFrames);
     const pending = new Set<number>();
     const failed = new Set<number>();
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -84,7 +85,7 @@ export function InoviAnimation() {
         context.imageSmoothingQuality = "high";
         const size = Math.min(width * 1.14, height * 1.25);
         context.drawImage(image, (width - size) / 2, (height - size) / 2, size, size);
-        if (firstDraw) { firstDraw = false; setReady(true); }
+        if (firstDraw) { firstDraw = false; preparedHeroFrames.clear(); setReady(true); }
         element.dataset.frame = String(index);
         element.dataset.resolution = `${image.naturalWidth}x${image.naturalHeight}`;
         lastFrame = index; lastWidth = width; lastHeight = height; lastDpr = dpr;

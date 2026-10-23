@@ -1,3 +1,4 @@
+import { SectionTextReveal } from "./section-text-reveal";
 import { ArrowUpRight, Instagram, Mail, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -13,7 +14,7 @@ export function InoviFooter() {
           <span className="inovi-footer-location"><MapPin size={15} aria-hidden="true" /> João Pessoa · PB</span>
         </div>
         <nav className="inovi-footer-contacts" aria-label="Contatos do laboratório">
-          <h2>FALE COM A INOVI</h2>
+          <h2><SectionTextReveal>FALE COM A INOVI</SectionTextReveal></h2>
           <a href={whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da INOVI: (83) 99824-7412">
             <FaWhatsapp size={19} aria-hidden="true" /><span>(83) 99824-7412</span><ArrowUpRight size={15} aria-hidden="true" />
           </a>

@@ -16,8 +16,10 @@ export function useScrollReveal(root: RefObject<HTMLElement | null>) {
       }
       observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("is-visible");
-          else entry.target.classList.remove("is-visible");
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer?.unobserve(entry.target);
+          }
         });
       }, { rootMargin: "0px 0px -5% 0px", threshold: 0 });
       nodes.forEach((node) => observer?.observe(node));

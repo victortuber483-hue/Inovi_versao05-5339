@@ -1,7 +1,12 @@
-# Animação de próteses vinculada ao scroll
-- Pedido: vídeo fornecido logo após hero, avanço e retorno controlados pela rolagem, branding INOVI.
-- Preservar hero, serviços sem preços, contatos e WhatsApp flutuante.
-- Fonte: Dental_prosthesis_animation_tran…_20261023012006_Dwb7Mg.mp4, 1280×720, 24 fps, 192 frames, 8 segundos.
-- Plano: extrair sequência WebP desktop/mobile; canvas sticky com cache limitado e frame proporcional ao scroll; logo + chamada na mesma seção; preferência de movimento reduzido mostra imagem estática.
-- Testes: build, frame inicial/intermediário/final/retorno, celular, ausência de overflow, WhatsApp e continuidade até serviços.
-- Estado: concluído. Build passou; desktop e celular verificaram avanço 0→48→115→191 e retorno 191→115→48→0, sem erros de navegador ou overflow. Hero e dois cards preservados. Movimento reduzido usa palco estático. Percurso encurtado a pedido: 240svh desktop / 220svh celular. Cache decodificado limitado a 24 imagens, até quatro carregamentos em paralelo.
+# Abertura INOVI
+- Implementar progresso por recursos essenciais, reserva hero compartilhada e primeiro quadro do scroll.
+- Preservar animações; não montar conteúdo durante preparação.
+- Tratar erro, timeout, retry e movimento reduzido.
+- Verificar progresso intermediário, final, falha, desktop/mobile, build e scroll.
+
+## Concluído
+- Abertura com logo, progresso real por 28 recursos essenciais (5 em movimento reduzido), 24 quadros hero compartilhados, poster responsivo do scroll e duas fontes.
+- Site montado apenas após preparação; transição 800ms e scroll liberado.
+- Falhas não contam como sucesso: retry e entrar sem esperar.
+- Build passou. Desktop/mobile: falha controlada em 96%, retry, abertura, canvas hero e scroll até 191, sem overflow ou erros JS.
+- Teste com último quadro retido confirmou 96%→100% por carregamento real e página não montada antecipadamente. Movimento reduzido testado.

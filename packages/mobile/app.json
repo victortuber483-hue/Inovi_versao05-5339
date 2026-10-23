@@ -10,8 +10,8 @@
       "edgeToEdgeEnabled": true
     },
     "extra": {
-      "apiUrl": "https://inovi-xmdveye-preview-4200.runable.site/",
-      "applicationId": "inovi-xmdveye",
+      "apiUrl": "https://inovi-yeaedt7-preview-4200.runable.site/",
+      "applicationId": "inovi-yeaedt7",
       "runableAuthIssuer": "https://api.runable.com/api/auth"
     },
     "ios": {
@@ -26,7 +26,7 @@
     "name": "mobile",
     "slug": "mobile",
     "version": "1.0.0",
-    "scheme": "runable-inovi-xmdveye",
+    "scheme": "runable-inovi-yeaedt7",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,

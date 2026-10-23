@@ -1,3 +1,4 @@
+import { SectionTextReveal } from "./section-text-reveal";
 import { useRef, useState } from "react";
 import { Instagram } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
@@ -5,7 +6,7 @@ import { useScrollReveal } from "../hooks/use-scroll-reveal";
 import { InoviServices } from "./inovi-services";
 import { InoviAbout } from "./inovi-about";
 
-const whatsapp = "https://wa.me/5583998247412?text=" + encodeURIComponent("Olá! Gostaria de conhecer as soluções em próteses dentárias da INOVI.");
+const whatsapp = "https://wa.me/5583998247412?text=" + encodeURIComponent("Olá, equipe INOVI! Vim pelo site e gostaria de solicitar um orçamento para um caso de prótese dentária. Quais informações e arquivos preciso enviar para começarmos?");
 
 export function VertexBio() {
   const [about, setAbout] = useState(false);
@@ -15,7 +16,11 @@ export function VertexBio() {
     <section ref={section} className="vertex-bio inovi-silver-section" aria-label="Serviços e contatos INOVI">
       <div className="bio-grid" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
       <InoviServices />
-      <div id="contatos" className="bio-column inovi-contact-area">
+      <header id="contatos" className="inovi-contact-intro">
+        <h2><SectionTextReveal>Vamos conversar sobre o seu próximo caso?</SectionTextReveal></h2>
+        <p>Conte com a INOVI para alinhar os detalhes, esclarecer dúvidas e solicitar seu orçamento.</p>
+      </header>
+      <div className="bio-column inovi-contact-area">
         <div className="bio-links">
           <div className="bio-card-reveal" data-scroll-reveal="slide-left"><a className="bio-link-card" href={whatsapp} target="_blank" rel="noopener noreferrer"><span className="bio-icon"><FaWhatsapp /></span><div><h3>WhatsApp</h3><p>Entre em contato para<br />orçamentos e dúvidas.</p><span className="bio-link-label">Clique para acessar</span></div></a></div>
           <div className="bio-card-reveal" data-scroll-reveal="slide-right"><a className="bio-link-card" href="https://www.instagram.com/inovidental/" target="_blank" rel="noopener noreferrer"><span className="bio-icon"><Instagram strokeWidth={1.8} /></span><div><h3>Instagram</h3><p>Acompanhe nossos trabalhos<br />e o dia a dia do laboratório.</p><span className="bio-link-label">Acessar @inovidental</span></div></a></div>

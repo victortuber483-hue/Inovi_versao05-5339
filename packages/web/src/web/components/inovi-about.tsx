@@ -1,3 +1,4 @@
+import { SectionTextReveal } from "./section-text-reveal";
 import { useEffect, useRef } from "react";
 import { ArrowUpRight, Layers3, MapPin, ScanLine, UsersRound, X } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
@@ -66,7 +67,7 @@ export function InoviAbout({ open, onClose }: { open: boolean; onClose: () => vo
       <div ref={content} className="inovi-about-content" tabIndex={0} role="region" aria-label="Apresentação do laboratório">
         <div className="inovi-about-location"><MapPin size={13} aria-hidden="true" /> JOÃO PESSOA · PARAÍBA</div>
         <span className="inovi-about-eyebrow">SOBRE A INOVI</span>
-        <h2 id="inovi-about-title">Tecnologia e cuidado.<br /><span>Uma parceria em cada sorriso.</span></h2>
+        <h2 id="inovi-about-title"><SectionTextReveal>Tecnologia e cuidado.<br /><span className="inovi-about-title-accent">Uma parceria em cada sorriso.</span></SectionTextReveal></h2>
         <p id="inovi-about-intro" className="inovi-about-intro">Somos um laboratório de próteses dentárias em João Pessoa, PB. Unimos recursos digitais e o cuidado do trabalho protético para apoiar dentistas na criação de sorrisos com naturalidade e função.</p>
         <div className="inovi-about-pillars">
           {pillars.map(({ icon: Icon, title, text }, index) => (
